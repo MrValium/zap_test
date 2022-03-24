@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>ScafFail</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="starter-template.css" rel="stylesheet">
+	</head>
+	<body>
+	
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="index.jsp">ScafFail</a>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.jsp">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="books.jsp">Books</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<main role="main" class="container">
+			<div class="starter-template">

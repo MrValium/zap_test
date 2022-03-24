@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+   db:
+      image: mysql:latest
+      environment:
+         MYSQL_ROOT_PASSWORD: cJSP9AVuSbxZhRLxEs9x2MYEn2gxGHHT
+         MYSQL_DATABASE: scaffail_db
+         MYSQL_USER: scaffail_db_user
+         MYSQL_PASSWORD: ew9afPp8Kxernn5t83T5kwdmHDaqZ7Y7
+      volumes:
+         - ./db:/docker-entrypoint-initdb.d
+      restart: always
+   
+   web:
+      image: tomcat:9.0.33-jdk14-openjdk-oracle
+      environment:
+         JDBC_URL: jdbc:mysql://db:3306/scaffail_db?autoReconnect=true
+         JDBC_USER: scaffail_db_user
+         JDBC_PASS: ew9afPp8Kxernn5t83T5kwdmHDaqZ7Y7
+      ports:
+         - "80:8080"
+      volumes:
+         - ./target/ScafFail.war:/usr/local/tomcat/webapps/ScafFail.war
+      depends_on:
+         - db
+      restart: always
